@@ -27,23 +27,74 @@
               </div>
 
               <!-- Features -->
-               <section  class="w-full max-w-sm shrink-">
+               <section  class="w-full max-w-sm shrink-0">
                 <h2 class="text-xl font-bold">Welcome to Payooo!</h2>
                 <p class="text-stone-500">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
    
                 <div class="grid grid-cols-3 gap-2 mt-2">
-                    <button class="btn btn-lg text-xs bg-gradient-to-r from-cyan-500 to-blue-500 border-none text-white" id="add-money-features-button">Add Money</button>
-                    <button class="btn btn-lg text-xs" id="cash-out-features-button">Cashout</button>
+                    <button class="btn btn-lg text-xs" id="add-money-features-button">
+                        <div class="flex flex-col items-center">
+                        <img src="./images/add-money.webp" alt="" class="w-1/2">
+                        <p>Add Money</p>
+                    </div>
+                    </button>
+                    <button class="btn btn-lg text-xs" id="cash-out-features-button">
+                        <div class="flex flex-col items-center">
+                            <img src="./images/add-money.webp" alt="" class="w-1/2">
+                            <p>Cashout</p>
+                        </div>
+                    </button>
                     <button class="btn btn-lg text-xs">Transfer Money</button>
                     <button class="btn btn-lg text-xs">Get Bonus</button>
                     <button class="btn btn-lg text-xs">Pay Bill</button>
                     <button class="btn btn-lg text-xs">Transactions</button>
                 </div>
                </section>
-               <div class="divider"></div>
+               <div class="divider my-2 text-sm text-cyan-600 underline cursor-pointer hover:text-cyan-500"><span class="hidden" id="history-view">View All History</span></div>
+
+               <!-- History of payment -->
+                <section class="flex flex-col gap-2 max-w-sm shrink-0 w-full" id="payment-history">
+                  <div class=" flex items-center justify-between">
+                    <p class="ml-1 font-bold flex items-center gap-1 w-1/2"><img src="./images/add-money.webp" class="w-[24px]" alt=""> Latest Payment</p>
+                    <p class="text-xs text-stone-500 mr-1">View All</p>
+                  </div>
+               <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+ 
+                <div class="collapse-title text-sm font-medium">Electricity Bill</div>
+                <div class="collapse-content">
+                  <p class="text-xs text-stone-500" >Today 01:44 AM</p>
+                </div>
+
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-sm font-medium">Bank Deposit</div>
+                <div class="collapse-content">
+                  <p class="text-xs text-stone-500" >Today 01:44 AM</p>
+                </div>
+              </div>
+               <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-sm font-medium">Mobile Recharge</div>
+                <div class="collapse-content">
+                  <p class="text-xs text-stone-500" >Today 01:44 AM</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-sm font-medium">Gas Bill</div>
+                <div class="collapse-content">
+                  <p class="text-xs text-stone-500" >Today 01:44 AM</p>
+                </div>
+              </div>
+            </section>
+
+
+
              
             <!-- Add money -->
-                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl" id="add-money-form">
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden mt-2" id="add-money-form">
                     <form class="card-body py-5">
                       <div class="form-control">
                         <label class="label">
@@ -66,7 +117,7 @@
 
                   <!-- Cash out -->
             
-                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden" id="cash-out-form">
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden mt-2" id="cash-out-form">
                     <form class="card-body py-5">
                       <div class="form-control">
                         <label class="label">
