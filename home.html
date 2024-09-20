@@ -10,10 +10,15 @@
 
 <body>
     <main class="flex justify-center h-screen items-center">
+     
         <div class="mockup-phone border-primary flex flex-col items-center">
             <div class="camera"></div>
-            <div class="display">
+            <div class="display relative">
+              <!-- Alert -->
               <div class="artboard artboard-demo phone-3">
+                <div id="custom-alert" class="absolute top-0 bg-gradient-to-r from-cyan-500 to-blue-500  text-white rounded pt-6 pb-2 w-full text-center hidden">
+                  <p>This is an alert message!</p>
+                </div>
             <!-- Account Balance and logout -->
             <div class="stats shadow mb-3 w-full max-w-sm shrink-0">
                 <div class="stat place-items-center">
@@ -45,7 +50,13 @@
                         </div>
                     </button>
                     <button class="btn btn-lg text-xs">Transfer Money</button>
-                    <button class="btn btn-lg text-xs">Get Bonus</button>
+                    <button class="btn btn-lg text-xs" id="get-bonus-features-button">
+                      <div class="flex flex-col items-center">
+                        <img src="./images/add-money.webp" alt="" class="w-1/2">
+                        <p>Get Bonus</p>
+                        
+                      </div>
+                    </button>
                     <button class="btn btn-lg text-xs">Pay Bill</button>
                     <button class="btn btn-lg text-xs">Transactions</button>
                 </div>
@@ -95,6 +106,8 @@
              
             <!-- Add money -->
                   <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden mt-2" id="add-money-form">
+                  
+                    
                     <form class="card-body py-5">
                       <div class="form-control">
                         <label class="label">
@@ -137,6 +150,22 @@
                       </div>
                     </form>
                   </div>
+
+                  <!-- Get Bonus Amount -->
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-2 mb-[92px] hidden" id="get-bonus-form">
+                    <form class="card-body py-5">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Enter Bonus Coupon</span>
+                        </label>
+                        <input type="text" placeholder="Enter your Coupon" class="input input-bordered"  id="get-bonus" required/>
+                      </div>
+                      <!-- <p class="text-green-400 hidden">Successfully adding money!</p> -->
+                      <div class="form-control mt-6">
+                        <button class="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 border-none text-white" id="get-bonus-button">Get Bonus</button>
+                      </div>
+                    </form>
+                  </div>
             
               </div>
             </div>
@@ -148,5 +177,6 @@
     <script src="./js/cash-out.js"></script>
     <script src="./js/features.js"></script>
     <script src="./js/logout.js"></script>
+    <script src="./js/get-bonus.js"></script>
 </body>
 </html>

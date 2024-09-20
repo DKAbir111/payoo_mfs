@@ -44,4 +44,9 @@ document.getElementById("history-view").addEventListener("click", function(){
     */
 })
 
+//Get bonus feature
+document.getElementById("get-bonus-features-button").addEventListener("click", function(){
+    showFeatures("get-bonus-form","get-bonus-features-button");
+
+})
 

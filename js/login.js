@@ -9,7 +9,9 @@ document.getElementById("login-button").addEventListener("click",function(event)
         return;
     }
     else{
+       
         console.log("Login successful");
         window.location.href = "home.html";
+       
     }
 })
